@@ -1,9 +1,11 @@
+
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 
 public class US_elections {
-
+    
+// Code written by me
     public static int solution(int num_states, int[] delegates, int[] votes_Biden, int[] votes_Trump, int[] votes_Undecided){
         int[][] vote_table = getMinVotes(num_states, delegates, votes_Biden, votes_Trump, votes_Undecided);
         if (vote_table == null) return -1;                          // joe can't win
@@ -121,7 +123,10 @@ public class US_elections {
         if (max_del >= min_del) return rtn;         // joe can win
         else return null;                           // joe can't win
     }
+// End of my Code    
 
+    
+// Code given by Teaching Team as template
     public static void main(String[] args) {
         try {
             String path = args[0];
@@ -147,3 +152,4 @@ public class US_elections {
         }
     }
 }
+// End of Teaching Team Code
